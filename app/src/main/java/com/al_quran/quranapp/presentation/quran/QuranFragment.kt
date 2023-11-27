@@ -59,8 +59,8 @@ class QuranFragment : Fragment() {
                 progressBar.visibility = View.VISIBLE
                 rvQuran.visibility = View.GONE
             } else {
-                progressBar.visibility = View.VISIBLE
-                rvQuran.visibility = View.GONE
+                progressBar.visibility = View.GONE
+                rvQuran.visibility = View.VISIBLE
             }
         }
     }

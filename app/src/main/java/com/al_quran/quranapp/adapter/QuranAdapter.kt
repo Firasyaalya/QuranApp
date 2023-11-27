@@ -30,7 +30,7 @@ class QuranAdapter : RecyclerView.Adapter<QuranAdapter.SurahViewHolder>() {
 
     override fun getItemCount() = listSurah.size
 
-    override fun onBindViewHolder(holder: QuranAdapter.SurahViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SurahViewHolder, position: Int) {
         val data = listSurah[position]
         holder.binding.apply {
             tvSurah.text = data.englishName

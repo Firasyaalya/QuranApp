@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.viewmodel.ViewModelFactoryDsl
 import com.al_quran.quranapp.databinding.FragmentAdzanBinding
 import com.al_quran.quranapp.network.Resource
 import com.al_quran.quranapp.presentation.ViewModelFactory
@@ -23,7 +22,7 @@ class AdzanFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAdzanBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -36,7 +35,7 @@ class AdzanFragment : Fragment() {
                 is Resource.Success -> {
                     binding.apply {
                         it.data?.let { adzanDataResult ->
-                            tvLocation.text = adzanDataResult.listLocation[1]
+                                tvLocation.text = adzanDataResult.listLocation[1]
                                 tvDate.text = adzanDataResult.listCalendar[3]
                                   }
                                 }
